@@ -11,3 +11,14 @@ The Transversal Problem, is a group math investigation if the zero game is deter
 IPB Final Project is a project that gathered 17.5 final grade, wich essentialy revolves around a secret spy agency with diferent agents, documments and clearence levels.
 
 K-means clustering is working but only for 2 iterations, after the exams will be completely reworked to be more user/writter friendly and to work for the iterations needed.
+
+
+
+
+The 3 ongoing projects revolve around three areas:
+
+Matrix - Data Manipulation and Storage
+
+Transversal Problem - Machine Learning (min-max)
+
+K-Means - Sorting Data
