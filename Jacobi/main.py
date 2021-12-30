@@ -1,4 +1,7 @@
 # Initial Setup
+
+JACOBI = TRUE
+
 ERROR = 10 ** (-3)
 x01 = 0
 x02 = 0
@@ -25,10 +28,18 @@ def error(x1, x2, x3, x4, d):
 x1 = x2 = x3 = x4 = d = i = 1
 
 while error(x1, x2, x3, x4, d) >= ERROR:
+       
     x1 = f1(x01, x02, x03, x04)
-    x2 = f2(x01, x02, x03, x04)
-    x3 = f3(x01, x02, x03, x04)
-    x4 = f4(x01, x02, x03, x04)
+    
+    if JACOBI:
+        x2 = f2(x01, x02, x03, x04)
+        x3 = f3(x01, x02, x03, x04)
+        x4 = f4(x01, x02, x03, x04)
+    
+    else:
+        x2 = f2(x1, x02, x03, x04)
+        x3 = f3(x1, x2, x03, x04)
+        x4 = f4(x1, x2, x3, x04)
 
     d = max(abs(x1 - x01), abs(x2 - x02), abs(x3 - x03), abs(x4 - x04))
     print(f"{i} {x1:.5f} {x2:.5f} {x3:.5f} {x4:.5f} {error(x1, x2, x3, x4, d):.5f}")
